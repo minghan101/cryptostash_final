@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:wght@400;700&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none; /* Ensure there's no background causing transparency */
+    
+}
+
+.makeStyles-registerContainer-6 {
+    background-color: transparent !important; /* Set background to transparent */
+    box-shadow: none !important; /* Remove box shadow */
+    padding: 0 !important; /* Remove padding */
+    border: none !important; /* Remove border if present */
+}
+
+.makeStyles-registerContainer-30 {
+    background-color: transparent !important; /* Set background to transparent */
+    box-shadow: none !important; /* Remove box shadow */
+    padding: 0 !important; /* Remove padding */
+    border: none !important; /* Remove border if present */
+}
+
+.form-box {
+    width: 500px;
+    margin: 0px 10px;
+    margin-top: 250px;
+    background: none; /* Ensure no background is causing transparency */
+    box-shadow: none; /* Remove any box shadow */
+    border: none; /* Remove any border */
+}
+
+.form-box header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    background: none; /* Ensure no background is causing transparency */
+    color:aliceblue;
+}
+
+.form-box form .field {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box form .field-input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white; /* Ensure input background is white */
+}
+
+.message p {
+    color: red;
+}
+
+.form-box form .field-input label {
+    font-size: 16px;
+    font-weight: 500; /* Slightly bold labels */
+    margin-bottom: 5px; /* Space below the label */
+    color: white; /* Set label color to white */
+}
+
+/* Suggestion List */
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px; /* Limit the height of the suggestions list */
+    overflow-y: auto; /* Add scroll if the list is too long */
+    position: absolute;
+    background: white;
+    z-index: 1000; /* Ensure the list appears above other elements */
+    width: 100%;
+    color: black;
+    border-radius:10px;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.field-input {
+    position: relative; /* Ensure positioning context for suggestions list */
+}
+
+.validation-message p {
+    color: red;
+    margin-top: 10px;
+}

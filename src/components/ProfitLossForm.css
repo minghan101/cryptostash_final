@@ -1,0 +1,65 @@
+/* src/components/ProfitLossForm.css */
+.profit-loss-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #2c2c2c; /* Matching dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profit-loss-form-box {
+    width: 90%;
+    margin-left: 20px;
+  }
+  
+  .profit-loss-form-box header {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .profit-loss-form-field-input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .profit-loss-form-label {
+    color: #ffffff; /* White color for labels */
+    font-weight: bold; /* Bold font for labels */
+  }
+  
+  .profit-loss-form-select {
+    background-color: #333; /* Dark background for select box */
+    color: white; /* White text color */
+  }
+  
+  .profit-loss-form-textField {
+    background-color: #333; /* Dark background for input fields */
+    color: white; /* White text color */
+    margin-top: 5px;
+  }
+  
+  .profit-loss-form-submit-button {
+    background-color: #4caf50; /* Green color for button */
+    color: #ffffff;
+    margin-top: 10px;
+    font-family: 'Montserrat';
+  }
+  
+  .profit-loss-form-submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .profit-loss-form-error-text,
+  .profit-loss-form-success-text {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

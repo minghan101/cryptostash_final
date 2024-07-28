@@ -1,0 +1,68 @@
+/* src/components/TransactionRecord.css */
+
+.transaction-record-container {
+    width: 100%;
+    background-color: #1e1e1e; /* Darker container background */
+    border-radius: 12px; /* Slightly larger border-radius for a softer look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for prominence */
+    padding: 20px;
+    max-height: 560px;
+    overflow-y: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2%;
+}
+
+.transaction-record-title {
+    color: #f5f5f5; /* Light gray for better contrast */
+    font-size: 1.5rem; /* Larger font size for emphasis */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.transaction-record-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #2c2c2c; /* Slightly lighter dark background for the table */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures border-radius affects the table */
+}
+
+.transaction-record-table th,
+.transaction-record-table td {
+    border: 1px solid #444;
+    padding: 12px; /* Increased padding for better readability */
+    color: #f5f5f5; /* Light gray text for better contrast */
+    text-align: left;
+}
+
+.transaction-record-table th {
+    background-color: #538a77; /* Dark header background for contrast */
+    font-weight: bold;
+}
+
+.transaction-record-table tr {
+    background-color: rgb(97, 108, 112); /* Slightly lighter dark background for rows */
+}
+
+.transaction-record-table tr:hover {
+    background-color: #4a4a4a; /* Highlight row on hover for better visibility */
+}
+
+.transaction-record-delete-button {
+    background-color: #e74c3c; /* Red background for delete button */
+    color: #ffffff; /* White text for button */
+    border: none;
+    padding: 8px 15px; /* Larger padding for a better button size */
+    cursor: pointer;
+    border-radius: 6px; /* Slightly larger border-radius for button */
+    font-size: 0.875rem; /* Smaller font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.transaction-record-delete-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}

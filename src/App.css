@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
+
+/* Reset default styles and enable smooth scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Link styles */
+a {
+  text-decoration: none;
+  color: gold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Body styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212; /* Dark background for the whole page */
+  color: #e0e0e0; /* Light text color for readability */
+}
+
+/* Starry background styles */
+.app-container .stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.app-container .star {
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px white;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+/* Animation for stars */
+@keyframes twinkle {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Shooting Star Styles */
+.app-container .shooting-star {
+  position: absolute;
+  background: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px white;
+  opacity: 1;
+  transform: rotate(45deg);
+  animation: shoot 2s linear infinite;
+}
+
+/* Animation for Shooting Stars */
+@keyframes shoot {
+  0% {
+    opacity: 1;
+    transform: translateX(-200px) translateY(-200px) rotate(45deg); /* Extend start position */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 0;
+    transform: translateX(200px) translateY(200px) rotate(45deg);
   }
 }

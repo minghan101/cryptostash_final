@@ -1,0 +1,60 @@
+/* CryptoTable.css */
+
+/* Container for the table */
+.crypto-table-container {
+    width: 45%; /* Adjust as needed */
+    padding: 20px; /* Add some padding */
+    background: rgb(181, 187, 193); /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 650px; /* Fixed height to match the pie chart */
+    overflow-y: auto; /* Enable vertical scrolling */
+    opacity: 90%;
+}
+
+/* Table styles */
+.crypto-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+}
+
+.crypto-table th, .crypto-table td {
+    border: 1px solid black; /* Light border for table */
+    padding: 8px;
+}
+
+.crypto-table th {
+    background-color: #f2f2f2; /* Light background for headers */
+    text-align: left;
+}
+
+.crypto-table td {
+    text-align: center;
+}
+
+.crypto-table tr {
+    color: black;
+}
+
+/* Style for the delete button */
+.delete-button {
+    background-color: #ff4d4d; /* Red color for delete button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+/* Header for the crypto assets table */
+.crypto-assets-header {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5rem; /* Adjust font size */
+}

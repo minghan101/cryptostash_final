@@ -1,0 +1,56 @@
+.news-widget {
+  padding: 20px;
+  background-color: #dcdcdc; /* Light gray background for a modern look */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+  max-width: 700px; /* Limit width for readability */
+  margin: auto; /* Center the widget */
+  margin-top: 30px;
+}
+
+.news-article {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff; /* White background for articles */
+  border-radius: 8px; /* Rounded corners for individual articles */
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for separation */
+}
+
+.news-image {
+  width: 120px; /* Adjusted width */
+  height: 80px; /* Adjusted height */
+  object-fit: cover;
+  border-radius: 4px; /* Rounded corners for images */
+  margin-right: 15px;
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-headline {
+  color: #333; /* Dark gray for better readability */
+  text-decoration: none;
+  font-weight: 600; /* Slightly bolder headline */
+  font-size: 18px; /* Consistent with design system */
+}
+
+.news-headline:hover {
+  color: #007bff; /* Primary color for hover effect */
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 22px; /* Slightly smaller to fit better */
+  margin-bottom: 20px;
+  color: #E32636; /* Primary color for consistency */
+  font-weight: 700; /* Bolder font for headings */
+}
+
+p {
+  color: #555; /* Slightly darker gray for text */
+  font-size: 14px; /* Consistent with your design system */
+  line-height: 1.6; /* Improved line spacing for readability */
+}

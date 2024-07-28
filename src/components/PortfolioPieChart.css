@@ -1,0 +1,90 @@
+/* PortfolioPieChart.css */
+.chart-container {
+    width: 80%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: auto;
+    padding: 20px; /* Add some padding */
+    background: #1a1a1a; /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    opacity: 90%;
+  }
+  
+  .portfolioTitle {
+    color: #fff; /* White text for better readability */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5rem; /* Adjust font size */
+  }
+  
+  .pie-chart {
+    position: relative;
+    height: 570px; /* Set a fixed height */
+  }
+
+  /* PortfolioPieChart.css */
+
+/* PortfolioPieChart.css */
+
+/* Container for the layout */
+.chart-table-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between the chart and table */
+    margin: auto;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+/* Style for the Pie Chart container */
+.chart-container {
+    width: 60%; /* Adjust as needed */
+    padding: 20px; /* Add some padding */
+    background: #1a1a1a; /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.portfolioTitle {
+    color: #fff; /* White text for better readability */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.pie-chart {
+    position: relative;
+    height: 570px; /* Set a fixed height */
+}
+
+/* Style for the Table container */
+.table-container {
+    width: 35%; /* Adjust as needed */
+    padding: 20px; /* Add some padding */
+    background: rgb(181, 187, 193); /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 650px; /* Fixed height to match the pie chart */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Make the legends scrollable horizontally */
+.chartjs-legend {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.chartjs-legend li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.chartjs-legend li span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
