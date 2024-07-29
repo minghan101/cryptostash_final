@@ -2,6 +2,87 @@
 
 CryptoStash is a web application designed to help users manage their cryptocurrency portfolios, view real-time news updates, and analyze market trends. Built with React for the frontend and Node.js with MongoDB for the backend, CryptoStash provides a user-friendly interface for tracking and analyzing cryptocurrency investments.
 
+## 1 Introduction
+## 1.1 Overview
+CryptoStash is a cryptocurrency portfolio management application designed to help users track, analyze, and optimize their crypto investments. The application provides real-time data on cryptocurrency prices, visualizations of portfolio distribution, and tools for managing profit and loss.
+
+### 1.2 Features
+1. Interactive Coin Table
+2. Dynamic Portfolio Pie Chart
+3. Profit and Loss Tracker
+4. Secure Authentication and User Management
+
+ ### 2 Technologies Used
+Frontend: React, Material-UI, Chart.js
+Backend: Axios (API requests), Context API (state management)
+Deployment: [Specify if applicable, e.g., AWS, Heroku]
+
+## 3. Application Architecture
+
+### 3.1 Frontend Structure
+
+- **`src/components`**: Contains React components for various UI elements.
+- **`src/pages`**: Includes page components for different views (e.g., Dashboard, Portfolio).
+- **`src/context`**: Contains context providers for state management.
+- **`src/api`**: Includes API utility functions.
+- **`src/styles`**: Contains styling files and themes.
+
+### 3.2 Backend Structure (if applicable)
+
+- **`routes`**: API endpoints.
+- **`controllers`**: Functions to handle API logic.
+- **`models`**: Database schemas and models.
+- **`services`**: External services and utilities.
+
+### 3.3 State Management
+
+Utilizes **Context API** for managing global state across the application. The `StateProvider` component wraps the application, providing access to state and dispatch functions.
+
+## 4. Features and Usage
+
+### 4.1 Interactive Coin Table
+
+- **Purpose**: View and manage cryptocurrency prices.
+- **Usage**:
+  - Search and filter cryptocurrencies.
+  - Click on a row to see detailed information.
+
+### 4.2 Portfolio Pie Chart
+
+- **Purpose**: Visualize the distribution of your cryptocurrency holdings.
+- **Usage**:
+  - View real-time distribution.
+  - Hover over sections to see detailed percentages.
+
+### 4.3 Profit and Loss Tracker
+
+- **Purpose**: Record and track cryptocurrency transactions.
+- **Usage**:
+  - **Submit a Transaction**: Use the form to input transaction details.
+  - **Review History**: View a list of historical transactions and their impact on your portfolio.
+
+### 4.4 Authentication and Security
+
+- **Private Routes**: Secure access to authenticated pages.
+- **User Management**: Handles user registration and login.
+
+## 5. API Integration
+
+### 5.1 API Endpoints
+
+- **`GET /coins`**: Retrieve a list of cryptocurrencies.
+- **`GET /coins/:id`**: Retrieve detailed information about a specific coin.
+- **`POST /transactions`**: Submit a new transaction.
+- **`GET /transactions`**: Retrieve transaction history.
+
+### 5.2 Example Requests
+
+**Get Coin Data:**
+
+```bash
+curl -X GET "https://api.yourcryptoapi.com/coins"
+```
+
 ## Table of Contents
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
