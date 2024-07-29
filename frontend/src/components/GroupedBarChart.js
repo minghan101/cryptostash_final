@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import './GroupedBarChart.css';
+import { useCryptoData } from '../CryptoDataContext';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -9,6 +10,7 @@ const GroupedBarChart = () => {
   const [data, setData] = useState([]);
   const [visibleDatasets, setVisibleDatasets] = useState({ 'Buy Price': true, 'Sell Price': true });
   const [visibleLabels, setVisibleLabels] = useState({});
+  const { cryptoData, transactions } = useCryptoData(); // Get data from context
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +33,22 @@ const GroupedBarChart = () => {
     };
 
     fetchData();
-  }, []);
+  }, [cryptoData]);
+
+    // Combine context data with API data
+    useEffect(() => {
+      if (cryptoData) {
+        // Initialize visibility state for each coin based on context data
+        const initialVisibleLabels = cryptoData.reduce((acc, item) => {
+          acc[item.cryptoAsset] = true;
+          return acc;
+        }, {});
+        setVisibleLabels(prevLabels => ({
+          ...prevLabels,
+          ...initialVisibleLabels
+        }));
+      }
+    }, [cryptoData]); // Re-run when cryptoData changes
 
   const chartLabels = Array.isArray(data) ? data.map(item => item.cryptoAsset) : [];
   const buyPriceData = Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.buyPrice : null) : [];
