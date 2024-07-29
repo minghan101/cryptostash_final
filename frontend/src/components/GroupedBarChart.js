@@ -12,15 +12,17 @@ const GroupedBarChart = () => {
   const [visibleLabels, setVisibleLabels] = useState({});
   const { cryptoData, transactions } = useCryptoData(); // Get data from context
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('/api/chart-data');
         const chartData = await response.json();
-        console.log('Fetched chart data:', chartData);
+        console.log('Fetched chart data:', chartData); // Debugging line
 
         setData(chartData);
 
+        // Initialize visibility state for each coin
         const initialVisibleLabels = chartData.reduce((acc, item) => {
           acc[item.cryptoAsset] = true;
           return acc;
@@ -32,13 +34,21 @@ const GroupedBarChart = () => {
     };
 
     fetchData();
-  }, [cryptoData]);
+  }, []);
+  
+  /* TOO MANY RE-RENDERS TO REFRESH CHART
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/chart-data');
+        const chartData = await response.json();
+        console.log('Fetched chart data:', chartData);
+        
+        // Set chart data
+        setData(chartData);
 
-    // Combine context data with API data
-    useEffect(() => {
-      if (cryptoData) {
-        // Initialize visibility state for each coin based on context data
-        const initialVisibleLabels = cryptoData.reduce((acc, item) => {
+        // Initialize visibility state for each coin based on fetched data
+        const initialVisibleLabels = chartData.reduce((acc, item) => {
           acc[item.cryptoAsset] = true;
           return acc;
         }, {});
@@ -46,11 +56,20 @@ const GroupedBarChart = () => {
           ...prevLabels,
           ...initialVisibleLabels
         }));
+      } catch (error) {
+        console.error('Error fetching chart data:', error);
       }
-    }, [cryptoData]); // Re-run when cryptoData changes
+    };
 
+    if (transactions) {
+      fetchData();
+    }
+  }, [transactions]); // Fetch data when transactions change
+
+  // Combine context data with API data
   useEffect(() => {
     if (cryptoData) {
+      // Initialize visibility state for each coin based on context data
       const initialVisibleLabels = cryptoData.reduce((acc, item) => {
         acc[item.cryptoAsset] = true;
         return acc;
@@ -60,7 +79,8 @@ const GroupedBarChart = () => {
         ...initialVisibleLabels
       }));
     }
-  }, [cryptoData]);
+  }, []); // Update visibility when cryptoData changes
+  */
 
   const chartLabels = useMemo(() => {
     return Array.isArray(data) ? data.map(item => item.cryptoAsset) : [];
