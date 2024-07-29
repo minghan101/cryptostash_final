@@ -7,6 +7,9 @@ CryptoStash is a web application designed to help users manage their cryptocurre
 ## 1.1 Overview
 CryptoStash is a cryptocurrency portfolio management application designed to help users track, analyze, and optimize their crypto investments. The application provides real-time data on cryptocurrency prices, visualizations of portfolio distribution, and tools for managing profit and loss.
 
+#### Milestone reports of the report 
+Milestone reports, Poster, Video & Walkthrough: https://drive.google.com/drive/u/0/folders/1temiALn9MeJzfk_cD1DB7Wb20UqV5f2y
+
 ### 1.2 Features
 1. Interactive Coin Table
 2. Dynamic Portfolio Pie Chart
@@ -100,9 +103,24 @@ curl -X GET "https://api.yourcryptoapi.com/coins"
 ![image](https://github.com/user-attachments/assets/e9c4cf48-89a3-4488-9fad-b2994f38478f)
 
 
-# User Usage Guide
+# 📝 User Usage Guide
 
-## Table of Contents
+## 📑 Table of Contents
+- [🚀 Getting Started](#getting-started)
+- [📋 Prerequisites](#prerequisites)
+- [💾 Installation](#installation)
+- [🔧 Configuration](#configuration)
+- [📚 Usage](#usage)
+- [🧪 Testing](#testing)
+- [🚀 Deployment](#deployment)
+- [🤝 Contributing](#contributing)
+- [📜 License](#license)
+
+
+```markdown
+# 📝 User Usage Guide
+
+## 📑 Table of Contents
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -113,136 +131,135 @@ curl -X GET "https://api.yourcryptoapi.com/coins"
 - [Contributing](#contributing)
 - [License](#license)
 
-## Getting Started
+## 🚀 Getting Started
 
 To get a local copy of CryptoStash up and running on your machine, follow these steps.
 
-### Prerequisites
+## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
-- Node.js (v14 or higher)
-- MongoDB (for the backend)
 
-### Installation
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [MongoDB](https://www.mongodb.com/) (for the backend)
 
-1. **Clone the repository**
+## 💾 Installation
 
-    ```sh
-    git clone https://github.com/yourusername/CryptoStash.git
-    cd CryptoStash
-    ```
+### Clone the repository
 
-2. **Install Backend Dependencies**
+```bash
+git clone https://github.com/yourusername/CryptoStash.git
+cd CryptoStash
+```
 
-    Navigate to the backend directory and install the required packages.
+### Install Backend Dependencies
 
-    ```sh
-    cd backend
-    npm install
-    ```
+Navigate to the backend directory and install the required packages.
 
-3. **Install Frontend Dependencies**
+```bash
+cd backend
+npm install
+```
 
-    Navigate to the frontend directory and install the required packages.
+### Install Frontend Dependencies
 
-    ```sh
-    cd ../frontend
-    npm install
-    ```
+Navigate to the frontend directory and install the required packages.
 
-### Configuration
+```bash
+cd ../frontend
+npm install
+```
 
-1. **Set up MongoDB**
+## 🔧 Configuration
 
-    Make sure MongoDB is running on your local machine or a remote server. Update the MongoDB connection string in `backend/config/db.js`.
+### Set up MongoDB
 
-    ```js
-    // backend/config/db.js
-    module.exports = {
-      mongoURI: 'mongodb://localhost:27017/cryptostash'
-    };
-    ```
+Make sure MongoDB is running on your local machine or a remote server. Update the MongoDB connection string in `backend/config/db.js`.
 
-2. **Environment Variables**
+```javascript
+// backend/config/db.js
+module.exports = {
+  mongoURI: 'mongodb://localhost:27017/cryptostash'
+};
+```
 
-    Create a `.env` file in the backend directory with the following content:
+### Environment Variables
 
-    ```env
-    MONGO_URI=mongodb://localhost:27017/cryptostash
-    JWT_SECRET=your_jwt_secret
-    ```
+Create a `.env` file in the backend directory with the following content:
 
-    Make sure to replace `your_jwt_secret` with a strong secret key.
+```
+MONGO_URI=mongodb://localhost:27017/cryptostash
+JWT_SECRET=your_jwt_secret
+```
 
-### Usage
+Make sure to replace `your_jwt_secret` with a strong secret key.
 
-1. **Start the Backend Server**
+## 📚 Usage
 
-    In the backend directory, run the following command to start the server:
+### Start the Backend Server
 
-    ```sh
-    npm start
-    ```
+In the backend directory, run the following command to start the server:
 
-    The server will start on [http://localhost:5000](http://localhost:5000).
+```bash
+npm start
+```
 
-2. **Start the Frontend Application**
+The server will start on [http://localhost:5000](http://localhost:5000).
 
-    In the frontend directory, run the following command to start the React application:
+### Start the Frontend Application
 
-    ```sh
-    npm start
-    ```
+In the frontend directory, run the following command to start the React application:
 
-    The React app will open in your browser at [http://localhost:3000](http://localhost:3000).
+```bash
+npm start
+```
 
-### Testing
+The React app will open in your browser at [http://localhost:3000](http://localhost:3000).
 
-1. **Run Unit Tests**
+## 🧪 Testing
 
-    To run unit tests for the frontend, navigate to the frontend directory and run:
+### Run Unit Tests
 
-    ```sh
-    npm test
-    ```
+To run unit tests for the frontend, navigate to the frontend directory and run:
 
-    To run unit tests for the backend, navigate to the backend directory and run:
+```bash
+npm test
+```
 
-    ```sh
-    npm test
-    ```
+To run unit tests for the backend, navigate to the backend directory and run:
 
-2. **Integration Testing**
+```bash
+npm test
+```
 
-    For integration testing, you can use tools like Postman or Insomnia to test API endpoints.
+### Integration Testing
 
-### Deployment
+For integration testing, you can use tools like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/) to test API endpoints.
 
-1. **Build the Frontend for Production**
+## 🚀 Deployment
 
-    Navigate to the frontend directory and run:
+### Build the Frontend for Production
 
-    ```sh
-    npm run build
-    ```
+Navigate to the frontend directory and run:
 
-    This creates a production build of your application in the `frontend/build` directory.
+```bash
+npm run build
+```
 
-2. **Deploy Backend and Frontend**
+This creates a production build of your application in the `frontend/build` directory.
 
-    - Deploy the backend to a service like Heroku or AWS.
-    - Deploy the frontend to a service like Netlify or Vercel.
-    - Ensure you update the environment variables and MongoDB URI accordingly.
+### Deploy Backend and Frontend
 
-### Contributing
+- Deploy the backend to a service like [Heroku](https://www.heroku.com/) or [AWS](https://aws.amazon.com/).
+- Deploy the frontend to a service like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+
+Ensure you update the environment variables and MongoDB URI accordingly.
+
+## 🤝 Contributing
 
 We welcome contributions to CryptoStash! To contribute:
+
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/YourFeature`).
 3. Make your changes and commit (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Create a new Pull Request.
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
