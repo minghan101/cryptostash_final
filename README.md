@@ -151,21 +151,6 @@ curl -X GET "https://api.yourcryptoapi.com/coins"
 - [🤝 Contributing](#contributing)
 - [📜 License](#license)
 
-
-```markdown
-# 📝 User Usage Guide
-
-## 📑 Table of Contents
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## 🚀 Getting Started
 
 To get a local copy of CryptoStash up and running on your machine, follow these steps.
@@ -176,6 +161,7 @@ Before you begin, ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [MongoDB](https://www.mongodb.com/) (for the backend)
+- [Reactjs](https://react.dev/) (v18 or higher for frontend)
 
 ## 💾 Installation
 
