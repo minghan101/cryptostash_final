@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { TextField, Button, Typography, MenuItem, Select, InputLabel, FormControl } from '@mui/material';
 import './ProfitLossForm.css'; // Updated CSS
+import { useCryptoData } from '../CryptoDataContext';
 
 const ProfitLossForm = () => {
   const [cryptoAsset, setCryptoAsset] = useState('');
@@ -13,6 +14,10 @@ const ProfitLossForm = () => {
   const [success, setSuccess] = useState('');
   const [availableAssets, setAvailableAssets] = useState([]);
 
+  // Access crypto data from context
+  const { cryptoData, fetchCryptoData } = useCryptoData();
+
+  /*
   useEffect(() => {
     // Fetch available assets
     const fetchAvailableAssets = async () => {
@@ -30,6 +35,17 @@ const ProfitLossForm = () => {
   
       fetchAvailableAssets();
     }, []);
+    */
+
+    useEffect(() => {
+      // Fetch available assets from context
+      fetchCryptoData();
+    }, [fetchCryptoData]);
+  
+    useEffect(() => {
+      // Update availableAssets state whenever cryptoData changes
+      setAvailableAssets(cryptoData.map(asset => asset.cryptoAsset));
+    }, [cryptoData]);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
