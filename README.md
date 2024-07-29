@@ -1,31 +1,36 @@
 # 📈 CryptoStash
-![image](https://github.com/user-attachments/assets/91409ad2-2ad8-488e-a58f-60a07430be50)
+
+![CryptoStash](https://github.com/user-attachments/assets/91409ad2-2ad8-488e-a58f-60a07430be50)
+
 CryptoStash is a web application designed to help users manage their cryptocurrency portfolios, view real-time news updates, and analyze market trends. Built with React for the frontend and Node.js with MongoDB for the backend, CryptoStash provides a user-friendly interface for tracking and analyzing cryptocurrency investments.
 
-## 1 Introduction
+## 1. Introduction
 
-## 1.1 Overview
+### 1.1 Overview
 CryptoStash is a cryptocurrency portfolio management application designed to help users track, analyze, and optimize their crypto investments. The application provides real-time data on cryptocurrency prices, visualizations of portfolio distribution, and tools for managing profit and loss.
 
-#### Milestone reports of the report 
-Milestone reports, Poster, Video & Walkthrough: https://drive.google.com/drive/u/0/folders/1temiALn9MeJzfk_cD1DB7Wb20UqV5f2y
-Old repository(not in use): https://github.com/minghan101/CryptoStash
+#### Milestone Reports
+Milestone reports, Poster, Video & Walkthrough: [Google Drive](https://drive.google.com/drive/u/0/folders/1temiALn9MeJzfk_cD1DB7Wb20UqV5f2y)  
+Old repository (not in use): [GitHub](https://github.com/minghan101/CryptoStash)
 
-### 1.2 Features
+### 1.2 Main Features
 1. Interactive Coin Table
 2. Dynamic Portfolio Pie Chart
 3. Profit and Loss Tracker
 4. Secure Authentication and User Management
+5. NewsFeed
+6. Transaction History
+7. Consolidated Portfolio
+8. Currency Converter
 
- ### 2 Technologies Used
-Frontend: React, Material-UI, Chart.js
-Backend: Axios (API requests), Context API (state management)
-Deployment: [Specify if applicable, e.g., AWS, Heroku]
+### 2. Technologies Used
+- **Frontend**: React, Material-UI, Chart.js
+- **Backend**: Node.js, Axios (API requests), Context API (state management)
+- **Deployment**: [Specify if applicable, e.g., AWS, Heroku]
 
 ## 3. Application Architecture
 
 ### 3.1 Frontend Structure
-
 - **`src/components`**: Contains React components for various UI elements.
 - **`src/pages`**: Includes page components for different views (e.g., Dashboard, Portfolio).
 - **`src/context`**: Contains context providers for state management.
@@ -33,22 +38,19 @@ Deployment: [Specify if applicable, e.g., AWS, Heroku]
 - **`src/styles`**: Contains styling files and themes.
 
 ### 3.2 Backend Structure (if applicable)
-
 - **`routes`**: API endpoints.
 - **`controllers`**: Functions to handle API logic.
 - **`models`**: Database schemas and models.
 - **`services`**: External services and utilities.
 
 ### 3.3 State Management
-
 Utilizes **Context API** for managing global state across the application. The `StateProvider` component wraps the application, providing access to state and dispatch functions.
 
 ## 4. Features and Usage
 
 ### 4.1 Interactive Coin Table
-![image](https://github.com/user-attachments/assets/aac5c4fe-bbbb-4e29-85aa-9c14a33756cb)
-![image](https://github.com/user-attachments/assets/ddfab723-a9ce-4e3f-92ee-2413538b8bd3)
-
+![Interactive Coin Table](https://github.com/user-attachments/assets/aac5c4fe-bbbb-4e29-85aa-9c14a33756cb)
+![Interactive Coin Table](https://github.com/user-attachments/assets/ddfab723-a9ce-4e3f-92ee-2413538b8bd3)
 
 - **Purpose**: View and manage cryptocurrency prices.
 - **Usage**:
@@ -56,7 +58,7 @@ Utilizes **Context API** for managing global state across the application. The `
   - Click on a row to see detailed information.
 
 ### 4.2 Portfolio Pie Chart
-![image](https://github.com/user-attachments/assets/016282d3-bcce-4db1-b343-095b8f4da1e4)
+![Portfolio Pie Chart](https://github.com/user-attachments/assets/016282d3-bcce-4db1-b343-095b8f4da1e4)
 
 - **Purpose**: Visualize the distribution of your cryptocurrency holdings.
 - **Usage**:
@@ -64,7 +66,7 @@ Utilizes **Context API** for managing global state across the application. The `
   - Hover over sections to see detailed percentages.
 
 ### 4.3 Profit and Loss Tracker
-![image](https://github.com/user-attachments/assets/b917f969-2ff2-486f-988a-59f8888b6af6)
+![Profit and Loss Tracker](https://github.com/user-attachments/assets/b917f969-2ff2-486f-988a-59f8888b6af6)
 
 - **Purpose**: Record and track cryptocurrency transactions.
 - **Usage**:
@@ -72,14 +74,45 @@ Utilizes **Context API** for managing global state across the application. The `
   - **Review History**: View a list of historical transactions and their impact on your portfolio.
 
 ### 4.4 Authentication and Security
-
 - **Private Routes**: Secure access to authenticated pages.
 - **User Management**: Handles user registration and login.
+
+### 4.5 NewsFeed
+![image](https://github.com/user-attachments/assets/23a2e8b3-770b-4cad-b4d1-b369d2d940b9)
+
+- **Purpose**: Provide real-time news updates related to cryptocurrency.
+- **Usage**:
+  - Browse through the latest news articles.
+  - Click on articles for detailed views.
+
+### 4.6 Transaction History
+![image](https://github.com/user-attachments/assets/658eb47a-8020-423d-ac07-ae5e87f5d888)
+![image](https://github.com/user-attachments/assets/40696ee3-501d-4fa1-a527-74959bce170d)
+
+- **Purpose**: View a history of all cryptocurrency transactions.
+- **Usage**:
+  - Access detailed records of past transactions.
+  - Filter, Delete and sort transactions as needed.
+
+### 4.7 Consolidated Portfolio Table
+![image](https://github.com/user-attachments/assets/d9370a94-dea1-43fd-99e9-397dc52d147d)
+
+- **Purpose**: Provide a summary view of the entire portfolio across different cryptocurrencies.
+- **Usage**:
+  - Review aggregated data on holdings and performance.
+
+### 4.8 Currency Converter
+![image](https://github.com/user-attachments/assets/050badfa-d925-4bcf-931f-874390f579a1)
+![image](https://github.com/user-attachments/assets/4c3f0f1b-ad98-4327-8ac6-0b0059ab1dc3)
+![image](https://github.com/user-attachments/assets/53d0f85a-211b-45f6-a366-ab3754e3a2db)
+
+- **Purpose**: Convert cryptocurrency values to different fiat currencies.
+- **Usage**:
+  - Toggle the currency on the top right hand corner of the label.
 
 ## 5. API Integration
 
 ### 5.1 API Endpoints
-
 - **`GET /coins`**: Retrieve a list of cryptocurrencies.
 - **`GET /coins/:id`**: Retrieve detailed information about a specific coin.
 - **`POST /transactions`**: Submit a new transaction.
@@ -91,7 +124,7 @@ Utilizes **Context API** for managing global state across the application. The `
 
 ```bash
 curl -X GET "https://api.yourcryptoapi.com/coins"
-```
+
 ## 6. Database Structure
 
 ### 6.1 Entity-Relationship Diagram
