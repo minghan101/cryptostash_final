@@ -88,6 +88,19 @@ Utilizes **Context API** for managing global state across the application. The `
 ```bash
 curl -X GET "https://api.yourcryptoapi.com/coins"
 ```
+## Database Structure
+
+### 6.1 Entity-Relationship Diagram
+![image](https://github.com/user-attachments/assets/ec745924-8b1c-460a-951e-074f1c1f9db7)
+
+### 6.2 Unified Modelling Language (UML)
+![image](https://github.com/user-attachments/assets/52aa03cd-2ef6-4379-bca7-191ce0d62172)
+
+## Application Design Flow
+![image](https://github.com/user-attachments/assets/e9c4cf48-89a3-4488-9fad-b2994f38478f)
+
+
+# User Usage Guide
 
 ## Table of Contents
 - [Getting Started](#getting-started)
