@@ -26,7 +26,7 @@ Old repository (not in use): [GitHub](https://github.com/minghan101/CryptoStash)
 ### 2. Technologies Used
 - **Frontend**: React, Material-UI, Chart.js
 - **Backend**: Node.js, Axios (API requests), Context API (state management)
-- **Deployment**: [Specify if applicable, e.g., AWS, Heroku]
+- **Deployment**: render.com
 
 ## 3. Application Architecture
 
