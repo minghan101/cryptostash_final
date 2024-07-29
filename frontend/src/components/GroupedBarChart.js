@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import './GroupedBarChart.css';
@@ -17,11 +17,10 @@ const GroupedBarChart = () => {
       try {
         const response = await fetch('/api/chart-data');
         const chartData = await response.json();
-        console.log('Fetched chart data:', chartData); // Debugging line
+        console.log('Fetched chart data:', chartData);
 
         setData(chartData);
 
-        // Initialize visibility state for each coin
         const initialVisibleLabels = chartData.reduce((acc, item) => {
           acc[item.cryptoAsset] = true;
           return acc;
@@ -50,9 +49,34 @@ const GroupedBarChart = () => {
       }
     }, [cryptoData]); // Re-run when cryptoData changes
 
-  const chartLabels = Array.isArray(data) ? data.map(item => item.cryptoAsset) : [];
-  const buyPriceData = Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.buyPrice : null) : [];
-  const sellPriceData = Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.sellPrice : null) : [];
+  useEffect(() => {
+    if (cryptoData) {
+      const initialVisibleLabels = cryptoData.reduce((acc, item) => {
+        acc[item.cryptoAsset] = true;
+        return acc;
+      }, {});
+      setVisibleLabels(prevLabels => ({
+        ...prevLabels,
+        ...initialVisibleLabels
+      }));
+    }
+  }, [cryptoData]);
+
+  const chartLabels = useMemo(() => {
+    return Array.isArray(data) ? data.map(item => item.cryptoAsset) : [];
+  }, [data]);
+
+  const buyPriceData = useMemo(() => {
+    return Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.buyPrice : null) : [];
+  }, [data, visibleLabels]);
+
+  const sellPriceData = useMemo(() => {
+    return Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.sellPrice : null) : [];
+  }, [data, visibleLabels]);
+
+  //const chartLabels = Array.isArray(data) ? data.map(item => item.cryptoAsset) : [];
+  //const buyPriceData = Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.buyPrice : null) : [];
+  //const sellPriceData = Array.isArray(data) ? data.map(item => visibleLabels[item.cryptoAsset] ? item.sellPrice : null) : [];
 
   const handleLegendClick = (event, legendItem) => {
     const datasetKey = legendItem.text;
