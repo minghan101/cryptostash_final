@@ -124,6 +124,7 @@ Utilizes **Context API** for managing global state across the application. The `
 
 ```bash
 curl -X GET "https://api.yourcryptoapi.com/coins"
+```
 
 ## 6. Database Structure
 
