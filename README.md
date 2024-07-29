@@ -1,4 +1,4 @@
-# CryptoStash
+# 📈 CryptoStash
 ![image](https://github.com/user-attachments/assets/91409ad2-2ad8-488e-a58f-60a07430be50)
 CryptoStash is a web application designed to help users manage their cryptocurrency portfolios, view real-time news updates, and analyze market trends. Built with React for the frontend and Node.js with MongoDB for the backend, CryptoStash provides a user-friendly interface for tracking and analyzing cryptocurrency investments.
 
@@ -9,6 +9,7 @@ CryptoStash is a cryptocurrency portfolio management application designed to hel
 
 #### Milestone reports of the report 
 Milestone reports, Poster, Video & Walkthrough: https://drive.google.com/drive/u/0/folders/1temiALn9MeJzfk_cD1DB7Wb20UqV5f2y
+Old repository(not in use): https://github.com/minghan101/CryptoStash
 
 ### 1.2 Features
 1. Interactive Coin Table
