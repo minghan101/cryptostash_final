@@ -10,7 +10,7 @@ const GroupedBarChart = () => {
   const [data, setData] = useState([]);
   const [visibleDatasets, setVisibleDatasets] = useState({ 'Buy Price': true, 'Sell Price': true });
   const [visibleLabels, setVisibleLabels] = useState({});
-  const { cryptoData, transactions } = useCryptoData(); // Use context to get data
+  const { cryptoData, transactions } = useCryptoData(); // Get data from context
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +32,22 @@ const GroupedBarChart = () => {
     };
 
     fetchData();
-  }, [cryptoData]); // Ensure data fetch updates when cryptoData changes
+  }, [cryptoData]);
+
+    // Combine context data with API data
+    useEffect(() => {
+      if (cryptoData) {
+        // Initialize visibility state for each coin based on context data
+        const initialVisibleLabels = cryptoData.reduce((acc, item) => {
+          acc[item.cryptoAsset] = true;
+          return acc;
+        }, {});
+        setVisibleLabels(prevLabels => ({
+          ...prevLabels,
+          ...initialVisibleLabels
+        }));
+      }
+    }, [cryptoData]); // Re-run when cryptoData changes
 
   useEffect(() => {
     if (cryptoData) {
